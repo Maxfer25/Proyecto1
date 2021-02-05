@@ -86,25 +86,52 @@
         grid-template-rows: repeat(5,auto);
     }
     .container-bar{
-        width: 100%;
-        max-width: 55px;
+        top: 35%;
         position: fixed;
         right: 0;
+        font-size:1.5rem;
+        display: flex; 
+        flex-direction: column;
+        align-items:flex-end;
+        z-index: 100;
     }
-    .container-bar a{
-        display:block ;
-        padding: 15px;
-        text-decoration: none;
-        font-size: 17px;
-        position: relative;
-        transition: all 500ms ease;
+
+    .fab{
+       color: white;
+       text-decoration: none;
+       padding: .7rem;
+       display: flex;
+       transition: all .5s;
     }
-    .container-bar a:hover{
-        background: #1c1c1c;
+    .fa-facebook{
+        border-radius: 1rem 0 0 0;
+        background: #2E406E;
     }
-    .container-bar__social{
+    .fa-twitter{
+        background: #339dc5;
+    }
+    .fa-youtube{
+        background: #e83028;
+    }
+    .fa-instagram{
+        background: #3f60a5;
+    }
+    .fa-whatsapp{
+        background: green;
+        border-radius: 0 0 0 1rem;
+    }
+    .fab:first-child{
+       
+    }
+    .fab:last-child{
         
     }
+    .fab:hover{
+        padding-right: 3rem;
+        border-radius: 1rem 0 0 1rem;
+        box-shadow: 0 0 .5rem rgba(0,0,0,0.42);
+    }
+ 
     .principal-container__grilla-sidebar{
         grid-row-start: 1;
         grid-row-end: 6;
@@ -274,7 +301,10 @@
             width: 110px;
         }
         /*---------------------------------CONTAINER--------------------------------------*/
-
+        .container-bar{
+            display: block;
+            align-items: flex-end;
+        }
         .principal-container__grilla-sidebar{
            grid-column: span 1;
             
