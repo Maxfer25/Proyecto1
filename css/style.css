@@ -96,7 +96,7 @@
         z-index: 100;
     }
 
-    .fab{
+    .container-bar .fab{
        color: white;
        text-decoration: none;
        padding: .7rem;
@@ -120,13 +120,7 @@
         background: green;
         border-radius: 0 0 0 1rem;
     }
-    .fab:first-child{
-       
-    }
-    .fab:last-child{
-        
-    }
-    .fab:hover{
+    .container-bar .fab:hover{
         padding-right: 3rem;
         border-radius: 1rem 0 0 1rem;
         box-shadow: 0 0 .5rem rgba(0,0,0,0.42);
@@ -239,25 +233,67 @@
         margin-right: 10rem;
         margin-top: 1rem; 
        }
-   
+   /*-----------------------------------------footer----------------------------------------*/
     .footer {
         background-color:#3a799e;
         height: 8rem;
         width: 100%;
         bottom: 0%;
-    margin-top: 50px;}
-    .redes-sociales{
- 
-        background:#3a799e;
+        margin: auto;
+        max-width: 1200px;
+        padding: 20px;
+        color: #fff;
+    }
+    .footer__content{
+        padding: 10px;
         display: flex;
-        justify-content:flex-end;
-        padding: 20px 15px;
+        justify-content: space-between;
+    }
+    .footer__content__tittle{
+        font-size: 22px;
+    }
+    .informacion{
+        max-width: 400px;
+    }
+    .informacion p{
+        font-size: 14px;
+        color: #fff;
+        margin-top: 20px;
+    }
+    
+    
+    .redes-sociales{
+        background:#3a799e;
+        max-width: 400px;
     }
     .redes-sociales a{
+        margin-bottom: 2rem;
         margin-right: 2rem;
         font-size: 35px;
         color: #fff;
     }
+    .contactanos{
+        max-width: 400px;
+    }
+    .contactanos i{
+        display: flex;
+        margin-top: 6px;
+        margin-right: 1rem;
+        font-size: 25px;
+        color: #fff;
+    }
+    .contactanos label{
+        margin-top: 6px;
+        margin-left: 20px;
+        max-width: 150px;
+    }
+    .container-footer{
+        max-width: 100%;
+        background: black;
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+    }   
         
 
     /*---------------------------Responsive----------------------------*/
@@ -301,10 +337,7 @@
             width: 110px;
         }
         /*---------------------------------CONTAINER--------------------------------------*/
-        .container-bar{
-            display: block;
-            align-items: flex-end;
-        }
+    
         .principal-container__grilla-sidebar{
            grid-column: span 1;
             
@@ -329,6 +362,9 @@
        
         .footer{
             width: 100%;
+        }
+        .footer .redes-sociales a{
+           
         }
         
         }
