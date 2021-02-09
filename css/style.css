@@ -103,14 +103,14 @@
        display: flex;
        transition: all .5s;
     }
-    .fa-facebook{
+    .container-bar .fa-facebook{
         border-radius: 1rem 0 0 0;
         background: #2E406E;
     }
-    .fa-twitter{
+    .container-bar .fa-twitter{
         background: #339dc5;
     }
-    .fa-youtube{
+    .container-bar .fa-youtube{
         background: #e83028;
     }
     .fa-instagram{
@@ -236,13 +236,16 @@
    /*-----------------------------------------footer----------------------------------------*/
     .footer {
         background-color:#3a799e;
-        height: 8rem;
-        width: 100%;
-        bottom: 0%;
         margin: auto;
-        max-width: 1200px;
-        padding: 20px;
+        
         color: #fff;
+        
+    }
+    .principal-footer{
+        width: 100%;
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
     }
     .footer__content{
         padding: 10px;
@@ -256,44 +259,52 @@
         max-width: 400px;
     }
     .informacion p{
-        font-size: 14px;
+        font-size: 16px;
         color: #fff;
         margin-top: 20px;
     }
-    
-    
     .redes-sociales{
         background:#3a799e;
         max-width: 400px;
+       
     }
-    .redes-sociales a{
-        margin-bottom: 2rem;
-        margin-right: 2rem;
+    .redes-sociales .fab{
         font-size: 35px;
         color: #fff;
+        display: flex;
+        list-style: none; 
+        padding: .5rem; 
+    }
+    .redes-sociales label{
+        margin-left: 1rem;
+        font-size: 20px;
+        
     }
     .contactanos{
         max-width: 400px;
     }
-    .contactanos i{
+    .contactanos .fa{
         display: flex;
-        margin-top: 6px;
-        margin-right: 1rem;
         font-size: 25px;
-        color: #fff;
+        padding: .5rem;
     }
     .contactanos label{
         margin-top: 6px;
-        margin-left: 20px;
-        max-width: 150px;
+        margin-left: 1rem;
+        font-size: 15px;
     }
     .container-footer{
-        max-width: 100%;
         background: black;
-        display: flex;
-        padding: 10px;
-        justify-content: space-between;
+        
+        
     }   
+    .container-footer__row{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+    }
         
 
     /*---------------------------Responsive----------------------------*/
@@ -359,12 +370,9 @@
             min-width: 280px;
            
         }
-       
-        .footer{
-            width: 100%;
-        }
-        .footer .redes-sociales a{
-           
+    /*------------------------------------------- footer---------------------------------*/
+        .footer__content{
+         flex-wrap: wrap;
         }
         
         }
