@@ -38,6 +38,7 @@
    
     display: flex;
     justify-content: center;
+    margin-left: 10pc;
     
 }
 .menu-principal__item__lista a{
@@ -53,7 +54,7 @@
     margin:auto;   
 }
 .menu-principal__buscador{
-    width: 200px;
+    width: 210px;
     position: relative;
     top: 6px;
 }
@@ -77,6 +78,28 @@
 } 
 
     /*-------------------------------Container...........................*/
+    .publicidad{
+        position: fixed;
+        right: 0;
+       
+        z-index: 10;
+    }
+    .publicidad::before{
+        content: "X";
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 1.5rem;
+        font-weight: 700;
+      cursor: pointer;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .publicidad:active{
+        display: none;
+    }
+    .twitter-tweet{
+        max-width: 300px;
+    }
     .principal-container{
         max-width: 1200px;
         width: 100%;
@@ -152,10 +175,10 @@
         color: #111;
         font-family: fantasy;
         }		
-        .sidebar__lista li:nth-child(odd) { /* filas pares */
+        .sidebar__lista li:nth-child(odd) { 
         background-color: #f5f5f5;
         }
-        .sidebar__lista li:nth-child(even) { /* filas impares */
+        .sidebar__lista li:nth-child(even) { 
         background-color: #e5e5e5;
         }
     .principal-container__grilla-titulo{
@@ -233,11 +256,42 @@
         margin-right: 10rem;
         margin-top: 1rem; 
        }
+    .paginacion {
+        margin:20px 0;
+     text-align: center;
+    }
+     
+    .paginacion ul {
+       margin: 0;
+      padding-left: 0;
+      margin-left: 12rem;
+    }
+     
+    .paginacion ul li {
+        display:inline-block;
+        margin-right:10px;
+    }
+     
+    .paginacion ul li a {
+        display:block;
+        padding:10px 20px;
+        border-radius:5rem;
+        color:#fff;
+        background:#4a4b4b;
+        text-decoration: none;
+    }
+     
+    .paginacion ul li a:hover {
+        background:rgba(15, 165, 202, 0.945);
+    }
+     
+    .paginacion ul li .active {
+     
+        font-weight:bold;}
    /*-----------------------------------------footer----------------------------------------*/
     .footer {
         background-color:#3a799e;
-        margin: auto;
-        
+        margin: auto; 
         color: #fff;
         
     }
@@ -262,6 +316,7 @@
         font-size: 16px;
         color: #fff;
         margin-top: 20px;
+       
     }
     .redes-sociales{
         background:#3a799e;
@@ -277,8 +332,7 @@
     }
     .redes-sociales label{
         margin-left: 1rem;
-        font-size: 20px;
-        
+        font-size: 20px;    
     }
     .contactanos{
         max-width: 400px;
@@ -294,9 +348,7 @@
         font-size: 15px;
     }
     .container-footer{
-        background: black;
-        
-        
+        background: black;  
     }   
     .container-footer__row{
         display: flex;
@@ -313,9 +365,7 @@
     @media screen and (max-width: 600px ){
 
        /*----------------------------------------HEADER----------------------------------------*/
-        header{
-            width: 100%;
-        }
+      
        .menu-principal__responsive{
             display:block ;
             margin-left:10rem ;
@@ -329,6 +379,7 @@
             width: 60%;
             top: 68px;
             left: 0;
+            z-index: 100;
             
         }
         .menu-principal__buscador{
@@ -345,10 +396,11 @@
             margin:0;   
         }
         .buscador--flex:hover{
-            width: 110px;
+            width: 100px;
         }
         /*---------------------------------CONTAINER--------------------------------------*/
     
+        
         .principal-container__grilla-sidebar{
            grid-column: span 1;
             
@@ -370,10 +422,91 @@
             min-width: 280px;
            
         }
+        .paginacion  {
+            display: none;
+        }
+    
+        
     /*------------------------------------------- footer---------------------------------*/
         .footer__content{
          flex-wrap: wrap;
         }
+        .principal-footer{
+            width: auto;
+        }
+        .redes-sociales, .contactanos{
+            margin-top: 30px;
+        }
+    }
+    @media screen and (width:768px){
+  
+        .menu-principal__responsive{
+            display:block ;
+            margin-left:33rem ;
+        }
+        .menu-principal__item{
+           
+            background: rgba(1, 8, 22, 0.5);
+            margin-left: -70%;
+            transition: all 0.5s;
+            position: absolute;
+            width: 62%;
+            top: 68px;
+            left: 0;
+            z-index: 100;
+            
+        }
+        .menu-principal__buscador{
+             width: 160px;
+        }
+        .menu-principal__item__lista{
+            flex-direction: column;
+            
+        }
+        .menu-principal__item__lista li{
+            border-top: 1px solid #000;
+        }
+        #btn-menu:checked ~ .menu-principal__item{
+            margin:0;   
+        }
+        .buscador--flex:hover{
+            width: 120px;
+        }
+        /*---------------------------------CONTAINER--------------------------------------*/
+    
         
+        .principal-container__grilla-sidebar{
+           grid-column: span 1;
+            
+        }
+        .principal-container__grilla-titulo{
+           grid-column: span 2;
+           margin-left: 2rem;
         }
     
+        .principal-container__grilla{       
+            display: flex;
+            overflow:auto;
+            gap: 15px;
+            flex-wrap: nowrap;
+            scroll-snap-align: start;    
+        }
+
+        .principal-container__grilla__item{
+            min-width: 280px;
+           
+        }
+        .footer__content{
+            flex-wrap: wrap;
+            
+           }
+           .principal-footer{
+               width: auto;
+           }
+        .contactanos{
+            margin-left:11rem;
+            margin-top: 1rem;
+        }
+       
+           
+    }
