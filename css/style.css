@@ -27,6 +27,14 @@
     }
    
 /*--------------------------------------Header--------------------------------*/
+.logo{
+    width: 7rem;
+    height: 2rem;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
 .menu-principal__responsive{
     display: none;
     width: 30px;
@@ -256,23 +264,23 @@
         margin-right: 10rem;
         margin-top: 1rem; 
        }
-    .paginacion {
+    .pagination {
         margin:20px 0;
      text-align: center;
     }
      
-    .paginacion ul {
+    .pagination__item{
        margin: 0;
       padding-left: 0;
       margin-left: 12rem;
     }
      
-    .paginacion ul li {
+    .pagination__item li {
         display:inline-block;
         margin-right:10px;
     }
      
-    .paginacion ul li a {
+    .pagination__item  a {
         display:block;
         padding:10px 20px;
         border-radius:5rem;
@@ -281,27 +289,27 @@
         text-decoration: none;
     }
      
-    .paginacion ul li a:hover {
+    .pagination__item  a:hover {
         background:rgba(15, 165, 202, 0.945);
     }
      
-    .paginacion ul li .active {
+    .pagination__item .active {
      
         font-weight:bold;}
    /*-----------------------------------------footer----------------------------------------*/
-    .footer {
+    .principal-footer {
         background-color:#3a799e;
         margin: auto; 
         color: #fff;
         
     }
-    .principal-footer{
+    .principal-footer__primary{
         width: 100%;
         max-width: 1100px;
         margin: auto;
         padding: 20px;
     }
-    .footer__content{
+    .principal-footer__content{
         padding: 10px;
         display: flex;
         justify-content: space-between;
@@ -309,45 +317,45 @@
     .footer__content__tittle{
         font-size: 22px;
     }
-    .informacion{
+    .footer__content__informacion{
         max-width: 400px;
     }
-    .informacion p{
+    .footer__content__informacion p{
         font-size: 16px;
         color: #fff;
         margin-top: 20px;
        
     }
-    .redes-sociales{
+    .footer__content__redes-sociales{
         background:#3a799e;
         max-width: 400px;
        
     }
-    .redes-sociales .fab{
+    .footer__content__redes-sociales .fab{
         font-size: 35px;
         color: #fff;
         display: flex;
         list-style: none; 
         padding: .5rem; 
     }
-    .redes-sociales label{
+    .footer__content__redes-sociales label{
         margin-left: 1rem;
         font-size: 20px;    
     }
-    .contactanos{
+    .footer__content__contactanos{
         max-width: 400px;
     }
-    .contactanos .fa{
+    .footer__content__contactanos .fa{
         display: flex;
         font-size: 25px;
         padding: .5rem;
     }
-    .contactanos label{
+    .footer__content__contactanos label{
         margin-top: 6px;
         margin-left: 1rem;
         font-size: 15px;
     }
-    .container-footer{
+    .principal-footer__secundary{
         background: black;  
     }   
     .container-footer__row{
@@ -422,19 +430,19 @@
             min-width: 280px;
            
         }
-        .paginacion  {
+        .pagination  {
             display: none;
         }
     
         
     /*------------------------------------------- footer---------------------------------*/
-        .footer__content{
+        .principal-footer__content{
          flex-wrap: wrap;
         }
-        .principal-footer{
+        .principal-footer__primary{
             width: auto;
         }
-        .redes-sociales, .contactanos{
+        .footer__content__redes-sociales, .footer__content__contactanos{
             margin-top: 30px;
         }
     }
@@ -496,14 +504,14 @@
             min-width: 280px;
            
         }
-        .footer__content{
+        .principal-footer__content{
             flex-wrap: wrap;
             
            }
-           .principal-footer{
+           .principal-footer__primary{
                width: auto;
            }
-        .contactanos{
+        .footer__content__contactanos{
             margin-left:11rem;
             margin-top: 1rem;
         }
