@@ -46,7 +46,7 @@
    
     display: flex;
     justify-content: center;
-    margin-left: 10pc;
+   
     
 }
 .menu-principal__item__lista a{
@@ -163,6 +163,7 @@
         grid-column: span 1;
         height: auto;
         padding: 1rem;
+        width: 18rem;
     }
     .sidebar__titulo {
         background: rgb(218, 218, 218);
@@ -296,6 +297,26 @@
     .pagination__item .active {
      
         font-weight:bold;}
+    
+    .button-mode-dark{
+        position:absolute;
+        top: 8rem;
+        left: 2rem;
+        padding: 2rem;
+        
+    }
+    html.dark-mode body {
+        background: black;
+    }
+   
+    html.dark-mode header{
+        background: hsla(255, 0%, 90%, 1);
+        
+    }
+    html.dark-mode footer{
+        background: hsla(255, 0%, 90%, 1);
+        
+    }
    /*-----------------------------------------footer----------------------------------------*/
     .principal-footer {
         background-color:#3a799e;
@@ -324,10 +345,11 @@
         font-size: 16px;
         color: #fff;
         margin-top: 20px;
+        text-align: justify;
        
     }
     .footer__content__redes-sociales{
-        background:#3a799e;
+       
         max-width: 400px;
        
     }
@@ -354,6 +376,7 @@
         margin-top: 6px;
         margin-left: 1rem;
         font-size: 15px;
+        text-align: justify;
     }
     .principal-footer__secundary{
         background: black;  
@@ -376,7 +399,7 @@
       
        .menu-principal__responsive{
             display:block ;
-            margin-left:10rem ;
+            margin-left:2rem ;
         }
         .menu-principal__item{
            
@@ -408,7 +431,9 @@
         }
         /*---------------------------------CONTAINER--------------------------------------*/
     
-        
+        .container-bar{
+            bottom: 0;
+        }
         .principal-container__grilla-sidebar{
            grid-column: span 1;
             
@@ -450,7 +475,7 @@
   
         .menu-principal__responsive{
             display:block ;
-            margin-left:33rem ;
+            margin-left:25rem ;
         }
         .menu-principal__item{
            
@@ -458,7 +483,7 @@
             margin-left: -70%;
             transition: all 0.5s;
             position: absolute;
-            width: 62%;
+            width: 40%;
             top: 68px;
             left: 0;
             z-index: 100;
@@ -484,7 +509,8 @@
     
         
         .principal-container__grilla-sidebar{
-           grid-column: span 1;
+           grid-column: span 2;
+           width: auto;
             
         }
         .principal-container__grilla-titulo{
@@ -503,6 +529,9 @@
         .principal-container__grilla__item{
             min-width: 280px;
            
+        }
+        .pagination  {
+            display: none;
         }
         .principal-footer__content{
             flex-wrap: wrap;
